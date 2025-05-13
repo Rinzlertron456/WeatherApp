@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+.weather-app {
+  color: aliceblue;
+  font-family: Google Sans, Arial, sans-serif;
+  font-size: xxx-large;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, #4c4fe4, #5356c5, #432f7e);
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    width: 100%;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    box-sizing: border-box;
+  }
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+} */
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.saved {
+  color: black;
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 4.7rem;
+}
+.search {
+  color: black;
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 4.7rem;
+}
