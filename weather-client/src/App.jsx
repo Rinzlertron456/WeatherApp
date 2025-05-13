@@ -13,11 +13,16 @@ function App() {
             <div className="saved">
               <MdBookmark />
             </div>
-            <h1 className="title">Weather App</h1>
             <div className="search">
               <FiSearch />
             </div>
           </header>
+          <div className="weather-card">
+            <div className="weather-card-header">
+              <h1>Weather</h1>
+              <h2>Location</h2>
+            </div>
+          </div>
         </div>
       </div>
     </>
