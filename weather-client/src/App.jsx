@@ -1,9 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
+import axios from "axios";
 import { FiSearch } from "react-icons/fi";
 import { MdBookmark } from "react-icons/md";
 function App() {
   const [count, setCount] = useState(0);
+  useEffect(() => {
+    const api_key = "5618379e9ee8c75fd2f91290fddd98df";
+    axios
+      .get(
+        `http://api.openweathermap.org/data/2.5/forecast?q=${"Hyderabad"}&appid=${api_key}`
+      )
+      .then((res) => res.data)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <>
@@ -18,9 +33,10 @@ function App() {
             </div>
           </header>
           <div className="weather-card">
-            <div className="weather-card-header">
-              <h1>Weather</h1>
-              <h2>Location</h2>
+            <img className="temp-icon" src="./clear.png" alt="Clear Sky" />
+            <div className="temp-details">
+              <h1 className="temp">25°</h1>
+              <h2 className="location">New York</h2>
             </div>
           </div>
         </div>
